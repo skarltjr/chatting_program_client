@@ -23,7 +23,7 @@ public class ReceiveThread extends Thread{
                 if (message == null) {
                     break;
                 }
-                System.out.println("클라이언트님 : " + message);
+                System.out.println("상대방 : " + message);
             }
         } catch (IOException exception) {
             exception.printStackTrace();
