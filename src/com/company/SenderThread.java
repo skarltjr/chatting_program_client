@@ -19,13 +19,13 @@ public class SenderThread extends Thread{
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
             while (true) {
-                System.out.println("메세지를 입력해주세요. 종료를 원하시면 quit을 입력해주세요");
+                System.out.println("메세지를 입력해주세요. 종료를 원하시면 quit을 입력해주세요.");
                 String message = reader.readLine();
                 if (message.equals("quit")) {
                     break;
                 }
                 // client에게 전달
-                printWriter.write(message);
+                printWriter.println(message);
                 printWriter.flush();
             }
         } catch (IOException exception) {
